@@ -12,9 +12,9 @@ Precision : 0.54
 Recall : 0.58
 
 # 3. sentencepiece , BERT(base) 
-Accuracy
-Precision
-Recall
+Accuracy : 0.80
+Precision : 0.43
+Recall : 0.74
 
 추가적으로 TF-IDF를 통해서 lstm 혹은 Random Forest 진행시 성능이 너무 안좋아서 기술 안함.
 
