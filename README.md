@@ -1,9 +1,9 @@
-# MeteorologicalAgencyProject
+# Meteorological Agency Project
 2019.09.01~2019.12.12 기상청 프로젝트
 
 네이버, 비카인즈에서 '폭염' 관련 뉴스 기사를 크롤링  
--> 해당 뉴스 기사가 8가지 재해 + 비재해 인지 분류  
--> 데이터가 너무 imbalance -> 재해/비재해로 분류  
+-> 해당 뉴스 기사가 8가지 재해/비재해 분류    
+-> 데이터가 너무 imbalance -> 재해/비재해 분류  
 
 ## 배운 점  
 - 자연어와 딥러닝에 대한 입문  
@@ -15,3 +15,7 @@
 ## 향후 나아갈 점
 데이터 수를 늘리기 위해서 data generation에 관심을 갖게 되었음.  
 variational auto encoder와 NLP를 접목시킨 분야에 대한 공부를 진행하겠음.
+
+## 2021.02.05 (내 논문 내용 적용)  
+varitational auto encoder + Transformer version을 활용해서 재해 관련 데이터 생성 중  
+추 후, 생성된 데이터를 토대로 데이터를 balance하게 만들어서 분류 작업 진행 예정  
