@@ -8,7 +8,7 @@ Imbalance Issue로 재해/비재해 binary classification 문제로 환원
 ## 재해/비재해 비율  
 ![imbalance](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/imbalance.png)  
 재해 : 1,301건, 비재해 : 6,747건으로 비대칭적  
-## 길이  
+## Bert Tokenizer로 Tokenized된 제목+본문 길이     
 ![total](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/imbalance.png)  
 ![disaster](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/비재해.png)  
 ![nondisaster](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/재해.png)  
