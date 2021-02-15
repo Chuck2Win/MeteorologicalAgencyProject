@@ -7,6 +7,15 @@
 초기 분류 - 8가지 재해와 비지해  
 Imbalance Issue로 재해/비재해 binary classification 문제로 환원  
 
+# Model  
+Kobert+classifier  
+
+# 학습 방식  
+Early Stopping 방식 적용    
+1. Imbalanced dataset 그대로 활용  
+2. Imbalanced dataset Weighted Sampling  
+3. Augmented dataset 활용(train dataset, val dataset - balanced)(본인의 논문 적용)    
+최종적으로 test dataset으로 비교
 
 ## 배운 점  
 - 자연어와 딥러닝에 대한 입문  
