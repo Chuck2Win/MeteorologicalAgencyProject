@@ -9,6 +9,8 @@ Imbalance Issue로 재해/비재해 binary classification 문제로 환원
 
 # Model  
 Kobert+classifier  
+![model](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/model/model.png)  
+Token화 된 제목+본문과 길이를 넣어줌  
 
 # 학습 방식  
 Early Stopping 방식 적용    
