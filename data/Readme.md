@@ -13,4 +13,6 @@ Imbalance Issue로 재해/비재해 binary classification 문제로 환원
 ![disaster](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/비재해.png)  
 ![nondisaster](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/재해.png)  
 평균은 재해, 비재해가 비슷하나 전체적으로 긴 문장은 비재해인 경우에 더 많음.  
+  
+Train data(7,048), Val data(1,000), Test data(1,000) 건으로 나눠둠.  
 
