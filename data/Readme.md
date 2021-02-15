@@ -12,6 +12,7 @@ Imbalance Issue로 재해/비재해 binary classification 문제로 환원
 1. 괄호((),[],<>)와 그 안의 내용 제거  
 2. 특수문자 들 제거  
 3. 불용어 제거  
+- 데이터 전처리 후, 제목+본문의 길이가 10이하인 경우는 제거(8,048건->8,012건)  
 ## Bert Tokenizer로 Tokenized된 제목+본문 길이     
 ![total](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/imbalance.png)  
 ![disaster](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/비재해.png)  
