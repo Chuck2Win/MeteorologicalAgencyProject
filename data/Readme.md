@@ -1,12 +1,6 @@
-## 주어진 데이터
-
-비카인즈에서 크롤링한 '폭염' 관련 뉴스 기사 데이터 - 총 13만건  
-
-1. 재해 관련 기사 분류 TASK  
-이 중에서 Labeling한 기사 7696건  
-피해 관련 기사 - 960건   
-피해 부문 - 보건,축산업,수산양식,농업, 산업, 교통, 전력, 기타 피해 등 8가지로 구성 
-
-2. 피해 관련 문장 분류 TASK  
-Labeling된 피해 문장 : 1811건  
-비 피해 문장 : 13893건 (같은 기사 내에서 추출함)  
+# Data Description  
+네이버, 비카인즈에서 '폭염' 관련 뉴스 기사를 크롤링(13만건)    
+이 중 8,048건을 라벨링  
+초기 분류 - 8가지 재해와 비지해  
+Imbalance Issue로 재해/비재해 binary classification 문제로 환원  
+![img][https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/dataset.png]
