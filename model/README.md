@@ -1,4 +1,14 @@
 # 기상청 재해 뉴스 기사 분류
+
+## 1. Model  
+BERT+classifier  
+
+## Imbalance 에 대처하기 위한 방안  
+### 1) Data Augmentation  
+내 논문에 의거해서 Data Augmentation 진행  
+### 2) Random Sampling  
+비재해의 경우가 많아서 Batch 생성시 재해와 비재해 비율을 비슷하게 Sampling해서 학습 진행  
+
 ## 피해/비피해 분류
 
 # 1. tokenized by Okt, under sampling, bi-LSTM
