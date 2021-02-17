@@ -15,13 +15,13 @@ Token화 된 제목+본문과 길이를 넣어줌
 # 학습 방식  
 Early Stopping 방식 적용 
 ||Data set|Sampling|Train data set|Val data set|Test data set|
-||---|---|---|---|---|
+|---|---|---|---|---|---|
 |1|Imbalanced|Random Sampling|Imbalanced|Imbalanced|Imbalanced|
 |2|Imbalanced|Weighted Sampling|balanced|balanced|Imbalanced|
 |3|Augmented|Random Sampling|balanced|balanced|Imbalanced|
 
-## Augmented dataset 형성 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
-본인의 논문 활용
+## Augmented dataset 형성  
+본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
 
 ## 배운 점과 향 후 나아갈 점  
 - 자연어와 딥러닝에 대한 입문  
