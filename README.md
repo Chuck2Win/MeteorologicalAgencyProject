@@ -54,6 +54,14 @@ Early Stopping 방식 적용
 |:---:|:---:|
 |||  
 
+# 환경
+google colab에서 진행함.   
+추가적으로 필요한 library  
+1. transformers
+2. kobert-transformers
+3. kss
+4. sentencepiece
+
 ## 배운 점과 향 후 나아갈 점  
 - 자연어와 딥러닝에 대한 입문  
 - 데이터의 imbalance 문제에 대한 대처 - 추가 labeling, resampling(+SMOTE), Semi-supervised learning/Unsupervised learning 접근
