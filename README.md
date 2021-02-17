@@ -15,6 +15,7 @@ Token화 된 제목+본문과 길이를 넣어줌
 # 학습 방식  
 Early Stopping 방식 적용 
 ||Data set|Sampling|Train data set|Val data set|Test data set|
+||---|---|---|---|---|
 |1|Imbalanced|Random Sampling|Imbalanced|Imbalanced|Imbalanced|
 |2|Imbalanced|Weighted Sampling|balanced|balanced|Imbalanced|
 |3|Augmented|Random Sampling|balanced|balanced|Imbalanced|
