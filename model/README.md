@@ -1,30 +1,112 @@
-# 기상청 재해 뉴스 기사 분류
-
 ## 1. Model  
 BERT+classifier  
 
-## Imbalance 에 대처하기 위한 방안  
-### 1) Data Augmentation  
-내 논문에 의거해서 Data Augmentation 진행  
-### 2) Random Sampling  
-비재해의 경우가 많아서 Batch 생성시 재해와 비재해 비율을 비슷하게 Sampling해서 학습 진행  
+# Model  
+Kobert+classifier  
+![model](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/model/model.png)  
+Token화 된 제목+본문과 길이를 넣어줌  
 
-## 피해/비피해 분류
+# 학습 방식  
+Early Stopping 방식 적용 
+||Data set|Sampling|Train data set|Val data set|Test data set|
+|---|---|---|---|---|---|
+|model 1|Imbalanced|Random Sampling|Imbalanced|Imbalanced|Imbalanced|
+|model 2|Imbalanced|Weighted Sampling|balanced|balanced|Imbalanced|
+|model 3|Augmented|Random Sampling|balanced|balanced|Imbalanced|
 
-# 1. tokenized by Okt, under sampling, bi-LSTM
-Accuracy : 0.81
-Precision : 0.45
-Recall : 0.92
+## Augmented dataset 형성  
+본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
 
-# 2. tokenized by Okt, cross entropy loss(weighted), bi-LSTM
-Accuracy : 0.85
-Precision : 0.54
-Recall : 0.58
+# 결과  
+## model 1  
+### Train data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|0.9607|0.9861|0.9732|5032|
+|1|0.9174|0.7929|0.8506|980|  
 
-# 3. sentencepiece , BERT(base) 
-Accuracy : 0.80
-Precision : 0.43
-Recall : 0.74
+|acc|cross entropy|
+|:---:|:---:|  
+|0.9546|0.4028|  
 
-추가적으로 TF-IDF를 통해서 lstm 혹은 Random Forest 진행시 성능이 너무 안좋아서 기술 안함.
+### Val data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|0.9258|0.9525|0.9390|864|  
+|1|0.6306|0.5147|0.5668|136|  
 
+|acc|cross entropy|
+|:---:|:---:|  
+|0.8930|0.9363|  
+
+### Test data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|0.9170|0.9461|0.9313|817|
+|1|0.7197|0.6175|0.6647|183|  
+
+|acc|cross entropy|
+|:---:|:---:|
+|0.8860|0.8827|  
+
+## model 2  
+### Train data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|0.9703|0.7994|0.8766|2986|
+|1|0.8314|0.9759|0.8978|3026|  
+
+|acc|cross entropy|
+|:---:|:---:|  
+|0.8882|0.5086|  
+
+### Val data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|0.9016|0.7432|0.8148|592|  
+|1|0.7031|0.8824|0.7826|408|  
+
+|acc|cross entropy|
+|:---:|:---:|  
+|0.8000|1.0348|  
+
+### Test data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|0.9691|0.7687|0.8573|817|
+|1|0.4631|0.8907|0.6093|183|  
+
+|acc|cross entropy|
+|:---:|:---:|
+|0.7910|1.0625|  
+
+## model 3  
+### Train data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|||||
+|1|||||  
+
+|acc|cross entropy|
+|:---:|:---:|  
+|||  
+
+### Val data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|||||  
+|1|||||  
+
+|acc|cross entropy|
+|:---:|:---:|  
+|||  
+
+### Test data  
+||precision|recall|f1|support|
+|:---:|:---:|:---:|:---:|:---:|
+|0|||||
+|1|||||  
+
+|acc|cross entropy|
+|:---:|:---:|
+|||  
