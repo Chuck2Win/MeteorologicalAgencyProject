@@ -48,7 +48,7 @@ class preprocessing:
         self.data['len']=self.data['tokenized'].apply(lambda i : len(i))
         
         # 길이가 10이하인 경우 제거
-        self.data = self.data.loc[self.data['len']<10,:]
+        self.data = self.data.loc[self.data['len']>10,:]
         
         # max len으로 자르고, 모자란 부분은 패딩으로 채움
         self.data['ids'] = self.data['Total'].apply(lambda i : tokenizer.encode(i,add_special_tokens=True,truncation=True,padding='max_length',max_length=max_len))
