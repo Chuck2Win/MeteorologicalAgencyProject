@@ -1,22 +1,3 @@
-## 1. Model  
-BERT+classifier  
-
-# Model  
-Kobert+classifier  
-![model](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/model/model.png)  
-Token화 된 제목+본문과 길이를 넣어줌  
-
-# 학습 방식  
-Early Stopping 방식 적용 
-||Data set|Sampling|Train data set|Val data set|Test data set|
-|---|---|---|---|---|---|
-|model 1|Imbalanced|Random Sampling|Imbalanced|Imbalanced|Imbalanced|
-|model 2|Imbalanced|Weighted Sampling|balanced|balanced|Imbalanced|
-|model 3|Augmented|Random Sampling|balanced|balanced|Imbalanced|
-
-## Augmented dataset 형성  
-본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
-
 # 결과  
 ## model 1  
 ### Train data  
