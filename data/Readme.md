@@ -20,3 +20,4 @@ Imbalance Issue로 재해/비재해 binary classification 문제로 환원
   
 Train data(7,048), Val data(1,000), Test data(1,000) 건으로 나눠둠.  
 
+### 전처리 과정은 preprocessing.py 참조할 것  
