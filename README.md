@@ -13,7 +13,7 @@ Kobert+classifier
 Token화 된 제목+본문과 길이를 넣어줌  
 
 # 학습 방식  
-Early Stopping 방식 적용 
+Early Stopping 방식 적용   
 model 3는 2.19에 추가됨.(후속연구)      
 ||Data set|Sampling|Train data set|Val data set|Test data set|
 |---|---|---|---|---|---|
@@ -21,8 +21,9 @@ model 3는 2.19에 추가됨.(후속연구)
 |model 2|Imbalanced|Weighted Sampling|balanced|balanced|Imbalanced|
 |model 3|Augmented|Random Sampling|balanced|balanced|Imbalanced|
 
-## Augmented dataset 형성  
+## Augmented dataset 형성(후속연구)    
 본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
+데이터 생성하는 코드는 본인 논문의 github에 있음  
 
 # 결과  
 ## model 1  
