@@ -55,7 +55,10 @@ class preprocessing:
         # attention mask - mask될 부분은 0, 아닌 부분은 1
         self.data['mask']=(torch.tensor(self.data['ids'].tolist()).eq(1)==0).long().tolist()
     def return_data(self):
-        self.data.loc[:,['ids','mask','len','damage','Total']].to_pickle(return_file)
+        if 'damage' in data.columns:
+            self.data.loc[:,['ids','mask','len','damage','Total']].to_pickle(return_file)       
+        else:
+            self.data.loc[:,['ids','mask','len','Total']].to_pickle(return_file)       
 
 if __name__ == '__main__':
     tokenizer = get_tokenizer()
