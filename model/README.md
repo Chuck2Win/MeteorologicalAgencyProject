@@ -1,93 +1,25 @@
 # 결과  
-## model 1  
-### Train data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9607|0.9861|0.9732|5032|
-|1|0.9174|0.7929|0.8506|980|  
+| classifier  | Data set   | Sampling           | Train data set | Val data set | Test data set |
+| ----------- | ---------- | ------------------ | -------------- | ------------ | ------------- |
+| classifier1 | Imbalanced | Random  Sampling   | Imbalanced     | Imbalanced   | Imbalanced    |
+| classifer2  | Imbalanced | Weighted  Sampling | balanced       | balanced     | Imbalanced    |
+| classifier3 | Augmented  | Random  Sampling   | balanced       | balanced     | Imbalanced    |
 
-|acc|cross entropy|
-|:---:|:---:|  
-|0.9546|0.4028|  
 
-### Val data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9258|0.9525|0.9390|864|  
-|1|0.6306|0.5147|0.5668|136|  
+|              |      | precision | recall | f1     | support |
+| ------------ | ---- | --------- | ------ | ------ | ------- |
+| classifier 1 | 0    | 0.9185    | 0.9501 | 0.9340 | 842     |
+|              | 1    | 0.6744    | 0.5506 | 0.6063 | 158     |
+| classifier 2 | 0    | 0.9766    | 0.6948 | 0.8119 | 842     |
+|              | 1    | 0.3591    | 0.9114 | 0.5152 | 158     |
+| classifier 3 | 0    | 0.9309    | 0.9442 | 0.9375 | 842     |
+|              | 1    | 0.6781    | 0.6266 | 0.6513 | 158     |
 
-|acc|cross entropy|
-|:---:|:---:|  
-|0.8930|0.9363|  
-
-### Test data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9170|0.9461|0.9313|817|
-|1|0.7197|0.6175|0.6647|183|  
-
-|acc|cross entropy|
-|:---:|:---:|
-|0.8860|0.8827|  
-
-## model 2  
-### Train data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9703|0.7994|0.8766|2986|
-|1|0.8314|0.9759|0.8978|3026|  
-
-|acc|cross entropy|
-|:---:|:---:|  
-|0.8882|0.5086|  
-
-### Val data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9016|0.7432|0.8148|592|  
-|1|0.7031|0.8824|0.7826|408|  
-
-|acc|cross entropy|
-|:---:|:---:|  
-|0.8000|1.0348|  
-
-### Test data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9691|0.7687|0.8573|817|
-|1|0.4631|0.8907|0.6093|183|  
-
-|acc|cross entropy|
-|:---:|:---:|
-|0.7910|1.0625|  
-
-## model 3  
-### Train data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|||||
-|1|||||  
-
-|acc|cross entropy|
-|:---:|:---:|  
-|||  
-
-### Val data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|||||  
-|1|||||  
-
-|acc|cross entropy|
-|:---:|:---:|  
-|||  
-
-### Test data  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|||||
-|1|||||  
-
-|acc|cross entropy|
-|:---:|:---:|
-|||  
+|              | accuracy | cross entropy |
+| ------------ | -------- | ------------- |
+| classifier 1 | 0.8870   | 0.03183       |
+| classifier 2 | 0.7290   | 0.07741       |
+| classifier 3 | 0.8940   | 0.03549       |
+  
+데이터를 생성해서 추가해서 학습한 모델이 가장 좋은 결과를 낳게됨  
+minority class에 대해서 precision은 f1 score은 0.045(7.4%) 상승, accuracy는 0.007(0.78%)상승, cross entropy는 증가함.
