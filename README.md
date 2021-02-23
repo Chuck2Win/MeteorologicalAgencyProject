@@ -1,5 +1,6 @@
 # Meteorological Agency Project
-2019.09.01~2019.12.12 국립기상과학원 프로젝트
+2019.09.01~2019.12.12 국립기상과학원 프로젝트  
+본인은 이 프로젝트에서 중복기사 제거하기 및 BERT를 활용한 Classifier 만들기를 수행하였음.  
 
 # Data Description  
 네이버, 비카인즈에서 '폭염' 관련 뉴스 기사를 크롤링(13만건)    
@@ -14,7 +15,7 @@ Token화 된 제목+본문과 길이를 넣어줌
 
 # 학습 방식  
 Early Stopping 방식 적용   
-model 3는 2.19에 추가됨.(후속연구)      
+model 3는 2021.2.19 에 추가됨.(후속연구)      
 
 ## Augmented dataset 형성(후속연구)    
 본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
