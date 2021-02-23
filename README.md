@@ -7,6 +7,7 @@
 이 중 8,048건을 라벨링 -> 전처리 후 피해 관련 1,297건, 피해 비관련 6,701건    
 초기 분류 - 8가지 재해와 비재해  
 Imbalance Issue로 재해/비재해 binary classification 문제로 환원  
+(용량 문제로 압축해서 올려둠)  
 
 # Model  
 Kobert+classifier  
