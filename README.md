@@ -15,46 +15,37 @@ Token화 된 제목+본문과 길이를 넣어줌
 # 학습 방식  
 Early Stopping 방식 적용   
 model 3는 2.19에 추가됨.(후속연구)      
-||Data set|Sampling|Train data set|Val data set|Test data set|
-|---|---|---|---|---|---|
-|model 1|Imbalanced|Random Sampling|Imbalanced|Imbalanced|Imbalanced|
-|model 2|Imbalanced|Weighted Sampling|balanced|balanced|Imbalanced|
-|model 3|Augmented|Random Sampling|balanced|balanced|Imbalanced|
 
 ## Augmented dataset 형성(후속연구)    
 본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
 데이터 생성하는 코드는 본인 논문의 github에 있음  
 
 # 결과  
-## model 1  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9170|0.9461|0.9313|817|
-|1|0.7197|0.6175|0.6647|183|  
+| classifier  | Data set   | Sampling           | Train data set | Val data set | Test data set |
+| ----------- | ---------- | ------------------ | -------------- | ------------ | ------------- |
+| classifier1 | Imbalanced | Random  Sampling   | Imbalanced     | Imbalanced   | Imbalanced    |
+| classifer2  | Imbalanced | Weighted  Sampling | balanced       | balanced     | Imbalanced    |
+| classifier3 | Augmented  | Random  Sampling   | balanced       | balanced     | Imbalanced    |
 
-|acc|cross entropy|
-|:---:|:---:|
-|0.8860|0.8827|  
 
-## model 2  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0.9691|0.7687|0.8573|817|
-|1|0.4631|0.8907|0.6093|183|  
 
-|acc|cross entropy|
-|:---:|:---:|
-|0.7910|1.0625|  
+<left> Table. (4). Classifers for extrinsic evaluation</left>
 
-## model 3  
-||precision|recall|f1|support|
-|:---:|:---:|:---:|:---:|:---:|
-|0|||||
-|1|||||  
+|              |      | precision | recall | f1     | support |
+| ------------ | ---- | --------- | ------ | ------ | ------- |
+| classifier 1 | 0    | 0.9185    | 0.9501 | 0.9340 | 842     |
+|              | 1    | 0.6744    | 0.5506 | 0.6063 | 158     |
+| classifier 2 | 0    | 0.9766    | 0.6948 | 0.8119 | 842     |
+|              | 1    | 0.3591    | 0.9114 | 0.5152 | 158     |
+| classifier 3 | 0    | 0.9309    | 0.9442 | 0.9375 | 842     |
+|              | 1    | 0.6781    | 0.6266 | 0.6513 | 158     |
 
-|acc|cross entropy|
-|:---:|:---:|
-|||  
+|              | accuracy | cross entropy |
+| ------------ | -------- | ------------- |
+| classifier 1 | 0.8870   | 0.03183       |
+| classifier 2 | 0.7290   | 0.07741       |
+| classifier 3 | 0.8940   | 0.03549       |
+
 
 # 환경
 google colab에서 진행함.   
