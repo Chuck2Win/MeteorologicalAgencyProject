@@ -28,9 +28,6 @@ model 3는 2.19에 추가됨.(후속연구)
 | classifier3 | Augmented  | Random  Sampling   | balanced       | balanced     | Imbalanced    |
 
 
-
-<left> Table. (4). Classifers for extrinsic evaluation</left>
-
 |              |      | precision | recall | f1     | support |
 | ------------ | ---- | --------- | ------ | ------ | ------- |
 | classifier 1 | 0    | 0.9185    | 0.9501 | 0.9340 | 842     |
