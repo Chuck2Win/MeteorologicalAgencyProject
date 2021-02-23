@@ -42,7 +42,9 @@ model 3는 2.19에 추가됨.(후속연구)
 | classifier 1 | 0.8870   | 0.03183       |
 | classifier 2 | 0.7290   | 0.07741       |
 | classifier 3 | 0.8940   | 0.03549       |
-
+  
+데이터를 생성해서 추가해서 학습한 모델이 가장 좋은 결과를 낳게됨  
+minority class에 대해서 precision은 f1 score은 0.045(7.4%) 상승, accuracy는 0.007(0.78%)상승, cross entropy는 증가함.
 
 # 환경
 google colab에서 진행함.   
@@ -51,6 +53,16 @@ google colab에서 진행함.
 2. kobert-transformers
 3. kss
 4. sentencepiece
+
+# 사용방법
+## 전처리
+! python3 preprocessing.py --data_file (위치) --return_file (저장할 위치)  
+(train test validation split은 알아서 진행하면 됨)  
+## train
+! python3 train.py --model (모델 : Augmentation, None--min_model, WeightedRandomSample) --min_model (모델 저장명) --train_file (train file) --val_file (val file) --generated_sentence_file (생성시킨 파일의 위치)
+
+## inference
+! python3 inference.py --data_file (inference하고 싶은 전처리된 파일의 위치) --min_model (사용하고자 하는 모델의 위치) --predict False predict를 True로 하면, 해당 기사의 예측값을 원하는 저장 위치로 보냄. predict가 False라면 예측하고 loss와 acc 등을 계산(label이 있는 데이터에 활용하면 됨) 
 
 ## 배운 점과 향 후 나아갈 점  
 - 자연어와 딥러닝에 대한 입문  
