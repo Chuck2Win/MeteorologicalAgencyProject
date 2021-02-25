@@ -21,13 +21,14 @@ model 3는 2021.2.19 에 추가됨.(후속연구)
 ## Augmented dataset 형성(후속연구)    
 본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
 데이터 생성하는 코드는 본인 논문의 github에 있음(학위 논문 제출 후 공개 예정)  
-생성된 기사는 Greedy Decoding으로 생성함(Coverage mechanism 적용 X)    
+생성된 재해 관련 기사는 Greedy Decoding으로 생성함(Coverage mechanism 적용 X)  
+![augmented data](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/table6.jpg)  
 
 # 결과  
 | classifier  | Data set   | Sampling           | Train data set | Val data set | Test data set |
 | ----------- | ---------- | ------------------ | -------------- | ------------ | ------------- |
 | classifier1 | Imbalanced | Random  Sampling   | Imbalanced     | Imbalanced   | Imbalanced    |
-| classifer2  | Imbalanced | Weighted  Sampling | balanced       | balanced     | Imbalanced    |
+| classifier2  | Imbalanced | Weighted  Sampling | balanced       | balanced     | Imbalanced    |
 | classifier3 | Augmented  | Random  Sampling   | balanced       | balanced     | Imbalanced    |
 
 
@@ -60,7 +61,7 @@ google colab에서 진행함.
 # 사용방법
 ## 전처리
 ! python3 preprocessing.py --data_file (위치) --return_file (저장할 위치)  
-(train test validation split은 알아서 진행하면 됨)  
+(train test validation split은 직접 진행하면 됨, 내가 임의로 분류한 train val test set는 data 폴더에 있음.)    
 ## train
 ! python3 train.py --model (모델 : Augmentation, None--min_model, WeightedRandomSample) --min_model (모델 저장명) --train_file (train file) --val_file (val file) --generated_sentence_file (생성시킨 파일의 위치)
 
