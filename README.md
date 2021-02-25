@@ -8,7 +8,6 @@
 이 중 8,048건을 라벨링 -> 전처리 후 피해 관련 1,297건, 피해 비관련 6,701건    
 초기 분류 - 8가지 재해와 비재해  
 Imbalance Issue로 재해/비재해 binary classification 문제로 환원  
-(용량 문제로 압축해서 올려둠)  
 
 # Model  
 Kobert+classifier  
@@ -21,7 +20,8 @@ model 3는 2021.2.19 에 추가됨.(후속연구)
 
 ## Augmented dataset 형성(후속연구)    
 본인의 논문인 "Soley Transformer based Variational Auto Encoder For Sentence Generation"의 idea 활용  
-데이터 생성하는 코드는 본인 논문의 github에 있음(학위 논문 제출 후 공개 예정)    
+데이터 생성하는 코드는 본인 논문의 github에 있음(학위 논문 제출 후 공개 예정)  
+생성된 기사는 Greedy Decoding으로 생성함(Coverage mechanism 적용 X)    
 
 # 결과  
 | classifier  | Data set   | Sampling           | Train data set | Val data set | Test data set |
