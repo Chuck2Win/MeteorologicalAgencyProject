@@ -29,9 +29,12 @@ model 3는 2021.2.19 에 추가됨.(후속연구)
 | ----------- | ---------- | ------------------ | -------------- | ------------ | ------------- |
 | classifier1 | Imbalanced | Random  Sampling   | Imbalanced     | Imbalanced   | Imbalanced    |
 | classifier2  | Imbalanced | Weighted  Sampling | balanced       | balanced     | Imbalanced    |
-| classifier3 | Augmented  | Random  Sampling   | balanced       | balanced     | Imbalanced    |
+| classifier3 | Augmented  | Random  Sampling   | balanced       | balanced     | Imbalanced    |  
+
+## AUC, ROC
 ![model](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/auc_roc.png)  
 
+## Acc,Precision,Recall,F1
 |              |      | precision | recall | f1     | support |
 | ------------ | ---- | --------- | ------ | ------ | ------- |
 | classifier 1 | 0    | 0.9185    | 0.9501 | 0.9340 | 842     |
