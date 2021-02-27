@@ -32,7 +32,7 @@ model 3는 2021.2.19 에 추가됨.(후속연구)
 | classifier3 | Augmented  | Random  Sampling   | balanced       | balanced     | Imbalanced    |  
 
 ## AUC, ROC
-![model](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/auc_roc.png)  
+![model](https://github.com/Chuck2Win/MeteorologicalAgencyProject/blob/main/image/fig10.png)  
 
 ## Acc,Precision,Recall,F1
 |              |      | precision | recall | f1     | support |
@@ -44,11 +44,11 @@ model 3는 2021.2.19 에 추가됨.(후속연구)
 | classifier 3 | 0    | 0.9309    | 0.9442 | 0.9375 | 842     |
 |              | 1    | 0.6781    | 0.6266 | 0.6513 | 158     |
 
-|              | accuracy | cross entropy |
-| ------------ | -------- | ------------- |
-| classifier 1 | 0.8870   | 0.03183       |
-| classifier 2 | 0.7290   | 0.07741       |
-| classifier 3 | 0.8940   | 0.03549       |
+|              | accuracy | cross entropy | AUC |
+| ------------ | -------- | ------------- | ------------- |
+| classifier 1 | 0.8870   | 0.03183       |0.863|
+| classifier 2 | 0.7290   | 0.07741       |0.882|
+| classifier 3 | 0.8940   | 0.03549       |0.888|
   
 데이터를 생성해서 추가해서 학습한 모델이 가장 좋은 결과를 낳게됨  
 minority class에 대해서 precision은 f1 score은 0.045(7.4%) 상승, accuracy는 0.007(0.78%)상승, cross entropy는 증가함.
